@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap');
+/* selector universal */
+*{
+    font-family: 'Libre Franklin', sans-serif;
+    /* reset */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+/* selectores de etiqueta */
+body{
+    
+    background-image: url(../img/backgrounds/paper.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+
+p{
+    color: rgb (64, 47, 31);
+    font-weight: 100px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+h1{
+    font: weight 400px;
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+h4{
+    font-size: 18px;
+}
+/* selectores descendentes */
+nav{
+    background-color: rgba(217, 59, 24, 1);
+    padding: 40px 40px;
+    height: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    
+    /*position - static - relative - absolute - fixed - sticky*/
+    /* flex */
+    
+}
+
+    nav ul{
+        list-style: none;
+        /*display*/
+        /* display:inline-block;  */
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        word-spacing: 40px;
+        margin-left: 20%;
+        display: flex;
+        justify-content: space-between;
+                
+    }
+
+        nav ul li{
+             /*display*/
+             /* display:inline-block; */
+             word-spacing: 3px;                
+
+             /*margin*/
+        }
+            nav ul li a{
+                color: black;
+                text-decoration:none;
+                font-family: 'Libre Franklin', sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                letter-spacing: 3px;
+                margin-right: 30px;        
+                
+                
+            }
+
+            /*hover*/
+                nav ul li a:hover{
+                    text-decoration: underline;
+
+                }
+
+/* selector de grupo */
+h1,
+h2,
+h3{
+    color: rgb(140, 35, 13);
+    font-weight: 400;
+    margin: 10px;
+}
+
+header img{
+    /* width */
+    width: 100%;
+}
+
+footer img{
+    width: 30px;
+    }
+
+
+
+/* selectores de clase */
+.box-top{
+    /* anuncio antes de la nav */
+}
+
+.texto-verde{
+    color: green;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-italic{
+    font-style: italic;
+}
+
+/* selectores de ID */
+#intro{
+    /* propiedades */
+}
+
+/*Box model - width- height - margin - padding - border*/
+.contenedor{
+    /* box model */
+    width: 80%;
+    background-color: rgba(240, 117, 40, 0.5);
+    height:fit-content;
+    margin: auto;
+    padding: 50px;
+    border: solid 1px rgba(217, 59, 24, 0.9);
+    
+}
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 30px;
+    
+
+}
+
+    .productos figure {
+        width: 30%;
+        border: solid 1px gray;
+        border-radius: 10px;
+        background-color: white;
+        margin: 20px 0px;
+        padding: 10px 10px;
+
+
+    }
+        .productos figure figcaption {
+
+            color:rgba(217, 59, 24, 1);
+            font-size: 20px;
+            font-weight: 1000;
+            margin-bottom: 10px;
+            
+        }
+
+        .productos figure img {
+            width: 50%;
+        }
+
+        .productos figure p {
+            font-size: 15px;
+        }
+
+/* contacto con GRID */
+
+.empresa {
+    display: grid;
+    grid-template-columns: repeat (3);
+    grid-template-rows: repeat(5);
+    grid-template-areas: 
+    "phistoria phistoria phistoria"
+    "foto1 foto1 pcalidad"
+    "pmedioambiente foto2 foto2"
+    "foto3 foto4 foto4"
+    "foto3 pprocedimiento pprocedimiento";
+}
+
+    .empresa .showroom {
+    grid-area: foto1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+    .empresa .calidad {
+    grid-area: foto2;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    }
+
+    .empresa .medioambiente {
+        grid-area: foto3;
+        display: flex;
+        justify-content: center;
+        align-items:stretch;
+        
+    }
+       
+    .empresa .procedimiento {
+        grid-area: foto4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .empresa .historia{
+        grid-area: phistoria;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .empresa .parrafo1 {
+        grid-area: pcalidad;
+        display: flex;
+        justify-content: flex-start;
+        align-items:flex-start;  
+    }
+
+    .empresa .parrafo2 {
+        grid-area: pmedioambiente;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;  
+    }
+    .empresa .parrafo3 {
+        grid-area: pprocedimiento;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;  
+    }
+
+    .empresa p {
+        padding: 30px 30px;
+
+    }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+   
+}
+
+    footer a {
+        text-decoration: none;
+    }
+
+    footer svg {
+        width: 30px;
+        fill:rgba(217, 59, 24, 1);
+        margin-right: 10px;
+    }
+
+    footer ul {
+        list-style: none;
+    }
+
+        footer ul li a {
+            text-decoration: none;
+            font-size: 15px;
+            color:rgba(217, 59, 24, 1);
+
+        }
+
+
+@media (width <768px) {
+    .empresa {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (8, auto);
+        grid-template-areas: 
+        "phistoria"
+        "foto1"
+        "pcalidad"
+        "foto2"
+        "pmedioambiente"
+        "foto3"
+        "pprocedimiento"
+        "foto4";
+    }
+    /* se centra el logo cuando paso a mobile */
+    nav {
+        justify-content: center;
+    }
+    /* desaparece nav cuando paso a mobile */
+    nav ul {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
